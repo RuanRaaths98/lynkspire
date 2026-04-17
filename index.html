@@ -55,10 +55,10 @@
     ========================================= */
     .ann-bar {
       background: var(--dark-950);
-      padding: 11px 24px;
+      padding: 9px 24px;
       text-align: center;
-      font-size: 14px;
-      color: var(--white);
+      font-size: 12.5px;
+      color: rgba(255,255,255,0.38);
       letter-spacing: 0.01em;
     }
     .ann-bar strong { color: var(--cyan-500); font-weight: 500; }
@@ -904,35 +904,77 @@
       .why-grid                 { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
+      /* Nav — shrink logo to a sensible mobile size */
+      .nav-inner                { height: 76px; gap: 20px; }
+      .nav-logo img             { height: 64px; }
+      .mobile-menu              { top: 76px; }
       .nav-links, .nav-cta      { display: none; }
       .nav-hamburger            { display: flex; }
-      .hero-inner               { grid-template-columns: 1fr; }
+
+      /* Hero */
+      .hero-inner               { grid-template-columns: 1fr; min-height: auto; }
       .hero-image               { display: none; }
-      .hero-text                { padding: 80px 0; }
+      .hero-text                { padding: 64px 0 60px; }
+
+      /* Trust strip */
       .trust-strip-inner        { grid-template-columns: repeat(2, 1fr); }
-      .about-grid, .value-grid, .cap-inner { grid-template-columns: 1fr; gap: 48px; }
-      .about-badge              { right: 0; }
+      .trust-stat               { padding: 24px 20px; }
+      /* Remove left/right border in 2-col — only keep right dividers */
+      .trust-stat:first-child   { border-left: none; }
+
+      /* About / Value / Caps */
+      .about-grid, .value-grid, .cap-inner { grid-template-columns: 1fr; gap: 40px; }
+      .about-img                { height: 280px; }
+      .value-img                { height: 260px; }
+      /* Badge: pull it inside the image so it doesn't bleed below */
+      .about-badge              { position: absolute; bottom: 16px; right: 16px; }
+      .about-media              { padding-bottom: 0; }
+
+      /* Services */
       .services-header          { flex-direction: column; align-items: flex-start; gap: 20px; }
       .services-header-note     { max-width: 100%; }
       .services-grid            { grid-template-columns: 1fr; }
+      .svc-card                 { padding: 36px 28px; }
+
+      /* Industries */
       .ind-grid                 { grid-template-columns: repeat(2, 1fr); }
+
+      /* Process */
       .process-track            { grid-template-columns: 1fr 1fr; gap: 40px; }
       .process-track::before    { display: none; }
+
+      /* Why */
+      .why-grid                 { grid-template-columns: repeat(2, 1fr); }
+
+      /* FAQ */
       .faq-layout               { grid-template-columns: 1fr; gap: 40px; }
+
+      /* Footer */
+      .footer-logo img          { height: 80px; }
       .footer-top               { grid-template-columns: 1fr; gap: 36px; }
       .footer-bottom            { flex-direction: column; text-align: center; }
+
+      /* Proof */
       .proof-grid               { grid-template-columns: 1fr; }
     }
     @media (max-width: 580px) {
-      .section          { padding: 72px 0; }
-      .hero h1          { font-size: 34px; }
+      .section          { padding: 64px 0; }
+      .hero h1          { font-size: 32px; }
+      .hero-text        { padding: 52px 0 48px; }
       .hero-actions     { flex-direction: column; align-items: flex-start; }
       .trust-strip-inner{ grid-template-columns: 1fr; }
+      .trust-stat       { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.06); padding: 20px 16px; }
       .why-grid         { grid-template-columns: 1fr; }
       .ind-grid         { grid-template-columns: 1fr; }
       .process-track    { grid-template-columns: 1fr; }
       .form-row         { grid-template-columns: 1fr; }
       .cta-btns         { flex-direction: column; align-items: center; }
+      .ann-bar          { font-size: 11.5px; padding: 8px 16px; }
+      .svc-card         { padding: 28px 20px; }
+      .cap-inner        { gap: 32px; }
+      .value-grid       { gap: 32px; }
+      .about-grid       { gap: 32px; }
+      .why-card         { padding: 28px 20px; }
     }
   </style>
 </head>
