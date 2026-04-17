@@ -75,6 +75,7 @@
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       border-bottom: 1px solid rgba(255,255,255,0.07);
       transition: box-shadow var(--t) var(--ease);
+      overflow: visible;
     }
     .nav.scrolled { box-shadow: 0 4px 40px rgba(0,0,0,0.45); }
 
@@ -82,14 +83,16 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 352px;
+      height: 96px;
       gap: 32px;
     }
 
     .nav-logo img {
-      height: 352px;
+      height: 280px;
       width: auto;
       display: block;
+      position: relative;
+      z-index: 1;
     }
 
     .nav-links {
@@ -151,7 +154,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 352px; left: 0; right: 0;
+      top: 96px; left: 0; right: 0;
       background: var(--dark-800);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 16px 20px 24px;
