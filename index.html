@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lynkspire Global Partners — Supply Solutions Built for Reliable Trade</title>
   <meta name="description" content="Lynkspire Global Partners helps businesses source, import, distribute, and supply products with confidence. Professional global supply solutions." />
+  <link rel="icon" type="image/png" href="assets/Lynkspire-removebg-preview.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,300;0,14..32,400;0,14..32,500;0,14..32,600;0,14..32,700;0,14..32,800;0,14..32,900;1,14..32,400&display=swap" rel="stylesheet" />
@@ -15,24 +16,15 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      /* Brand colours — extracted from Lynkspire.png */
       --dark-950:  #060d18;
       --dark-900:  #09121f;
       --dark-800:  #0d1b35;
       --dark-700:  #122349;
       --dark-600:  #162d5e;
-
-      /* Cyan — the bright teal from the logo mark */
       --cyan-400:  #33e8f5;
       --cyan-500:  #00d4e8;
       --cyan-600:  #00b8cc;
-
-      /* Electric blue — the deeper blue from the logo gradient */
-      --blue-400:  #4d8eff;
       --blue-500:  #1a6aff;
-      --blue-600:  #0050e0;
-
-      /* Neutrals */
       --white:     #ffffff;
       --grey-50:   #f0f4f8;
       --grey-100:  #e2e8f0;
@@ -41,7 +33,6 @@
       --grey-500:  #64748b;
       --grey-700:  #334155;
       --grey-900:  #0f172a;
-
       --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       --ease: cubic-bezier(0.4, 0, 0.2, 1);
       --t:    0.22s;
@@ -79,15 +70,13 @@
       position: sticky;
       top: 0;
       z-index: 900;
-      background: rgba(9,18,31,0.96);
+      background: rgba(9,18,31,0.97);
       backdrop-filter: blur(20px) saturate(180%);
       -webkit-backdrop-filter: blur(20px) saturate(180%);
       border-bottom: 1px solid rgba(255,255,255,0.07);
       transition: box-shadow var(--t) var(--ease);
     }
-    .nav.scrolled {
-      box-shadow: 0 4px 40px rgba(0,0,0,0.45);
-    }
+    .nav.scrolled { box-shadow: 0 4px 40px rgba(0,0,0,0.45); }
 
     .nav-inner {
       display: flex;
@@ -120,10 +109,8 @@
     .nav-links a::after {
       content: '';
       position: absolute;
-      bottom: -3px;
-      left: 0;
-      width: 0;
-      height: 1.5px;
+      bottom: -3px; left: 0;
+      width: 0; height: 1.5px;
       background: var(--cyan-500);
       transition: width var(--t) var(--ease);
     }
@@ -139,8 +126,8 @@
       letter-spacing: 0.01em;
       border-radius: var(--r);
       white-space: nowrap;
-      transition: background var(--t) var(--ease), transform var(--t) var(--ease);
       display: inline-block;
+      transition: background var(--t) var(--ease), transform var(--t) var(--ease);
     }
     .nav-cta:hover { background: var(--cyan-400); transform: translateY(-1px); }
 
@@ -152,8 +139,7 @@
     }
     .nav-hamburger span {
       display: block;
-      width: 22px;
-      height: 1.8px;
+      width: 22px; height: 1.8px;
       background: var(--white);
       border-radius: 2px;
       transition: transform var(--t) var(--ease), opacity var(--t) var(--ease);
@@ -162,12 +148,10 @@
     .nav-hamburger.active span:nth-child(2) { opacity: 0; }
     .nav-hamburger.active span:nth-child(3) { transform: translateY(-6.8px) rotate(-45deg); }
 
-    /* Mobile menu */
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 96px;
-      left: 0; right: 0;
+      top: 96px; left: 0; right: 0;
       background: var(--dark-800);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 16px 20px 24px;
@@ -213,13 +197,8 @@
       border: none;
     }
     .btn:hover { transform: translateY(-2px); }
-
-    .btn-cyan {
-      background: var(--cyan-500);
-      color: var(--dark-900);
-    }
+    .btn-cyan { background: var(--cyan-500); color: var(--dark-900); }
     .btn-cyan:hover { background: var(--cyan-400); }
-
     .btn-outline-white {
       background: transparent;
       color: var(--white);
@@ -227,75 +206,81 @@
     }
     .btn-outline-white:hover { border-color: rgba(255,255,255,0.65); background: rgba(255,255,255,0.06); }
 
-    .btn-outline-cyan {
-      background: transparent;
-      color: var(--cyan-500);
-      border: 1.5px solid rgba(0,212,232,0.35);
-    }
-    .btn-outline-cyan:hover { border-color: var(--cyan-500); background: rgba(0,212,232,0.06); }
-
     /* =========================================
-       HERO
+       HERO — 60/40 SPLIT
     ========================================= */
     .hero {
-      position: relative;
-      min-height: 92vh;
-      display: flex;
-      align-items: center;
       background: var(--dark-900);
       overflow: hidden;
+      padding: 0;
     }
 
-    .hero-photo {
-      position: absolute;
-      inset: 0;
-      background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1920&q=80');
-      background-size: cover;
-      background-position: center 40%;
-      opacity: 0.10;
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 60fr 40fr;
+      min-height: 88vh;
+      align-items: stretch;
     }
 
-    /* Cyan glow orb — matches logo energy */
-    .hero-orb {
-      position: absolute;
-      right: -160px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 680px;
-      height: 680px;
-      background: radial-gradient(circle at center,
-        rgba(0,212,232,0.12) 0%,
-        rgba(26,106,255,0.07) 45%,
-        transparent 72%
-      );
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    /* Subtle geometric rings */
-    .hero-ring {
-      position: absolute;
-      right: -80px;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 580px;
-      height: 580px;
-      border: 1px solid rgba(0,212,232,0.08);
-      border-radius: 50%;
-      pointer-events: none;
-    }
-    .hero-ring::before {
-      content: '';
-      position: absolute;
-      inset: 56px;
-      border: 1px solid rgba(0,212,232,0.05);
-      border-radius: 50%;
-    }
-
-    .hero-content {
+    /* Left column — text */
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 96px 72px 96px 0;
       position: relative;
       z-index: 1;
-      max-width: 760px;
-      padding: 100px 0;
+    }
+
+    /* Subtle left glow */
+    .hero-text::before {
+      content: '';
+      position: absolute;
+      top: 30%;
+      left: -200px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle,
+        rgba(0,212,232,0.07) 0%,
+        transparent 65%
+      );
+      pointer-events: none;
+    }
+
+    /* Right column — image */
+    .hero-image {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-image img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    /* Dark overlay so it blends with the nav */
+    .hero-image::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to right,
+        var(--dark-900) 0%,
+        transparent 20%
+      );
+      z-index: 1;
+      pointer-events: none;
+    }
+    /* Cyan tint overlay */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 30, 60, 0.35);
+      z-index: 1;
+      pointer-events: none;
     }
 
     .eyebrow {
@@ -307,31 +292,26 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--cyan-500);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
-    .eyebrow-rule {
-      width: 28px;
-      height: 1.5px;
-      background: var(--cyan-500);
-    }
+    .eyebrow-rule { width: 28px; height: 1.5px; background: var(--cyan-500); }
 
     .hero h1 {
-      font-size: clamp(44px, 6vw, 84px);
-      font-weight: 900;
-      line-height: 1.03;
-      letter-spacing: -0.035em;
+      font-size: clamp(36px, 4.2vw, 62px);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.025em;
       color: var(--white);
-      margin-bottom: 28px;
+      margin-bottom: 24px;
     }
-    /* Cyan inline accent — matching logo mark colour */
     .hero h1 .accent { color: var(--cyan-500); }
 
     .hero-sub {
-      font-size: clamp(16px, 1.4vw, 18.5px);
-      color: rgba(255,255,255,0.52);
+      font-size: clamp(15px, 1.3vw, 17.5px);
+      color: rgba(255,255,255,0.54);
       line-height: 1.75;
-      max-width: 540px;
-      margin-bottom: 44px;
+      max-width: 520px;
+      margin-bottom: 40px;
       font-weight: 400;
     }
 
@@ -340,50 +320,53 @@
       align-items: center;
       gap: 14px;
       flex-wrap: wrap;
-      margin-bottom: 56px;
-    }
-
-    .hero-trust {
-      font-size: 12.5px;
-      color: rgba(255,255,255,0.28);
-      letter-spacing: 0.01em;
-      line-height: 1.65;
-      max-width: 480px;
     }
 
     /* =========================================
-       TRUST BAND
+       TRUST STRIP
     ========================================= */
-    .trust-band { border-bottom: 1px solid var(--grey-100); }
-    .trust-grid {
+    .trust-strip {
+      background: var(--dark-800);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .trust-strip-inner {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
-    .trust-cell {
-      padding: 36px 32px;
-      border-right: 1px solid var(--grey-100);
-      border-top: 1px solid var(--grey-100);
+    .trust-stat {
+      padding: 32px 28px;
+      border-right: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
     }
-    .trust-cell:first-child { border-left: 1px solid var(--grey-100); }
-    .trust-cell-tag {
-      font-size: 10.5px;
-      font-weight: 700;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--cyan-600);
-      margin-bottom: 10px;
+    .trust-stat:first-child { border-left: 1px solid rgba(255,255,255,0.06); }
+    .trust-stat-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      background: rgba(0,212,232,0.1);
+      border-radius: 6px;
+      display: grid;
+      place-items: center;
+      color: var(--cyan-500);
+      margin-top: 2px;
     }
-    .trust-cell-title {
-      font-size: 17px;
-      font-weight: 700;
-      color: var(--dark-800);
-      letter-spacing: -0.02em;
-      margin-bottom: 7px;
+    .trust-stat-body {}
+    .trust-stat-value {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 4px;
     }
-    .trust-cell-text {
+    .trust-stat-value span { color: var(--cyan-500); }
+    .trust-stat-label {
       font-size: 13px;
-      color: var(--grey-400);
-      line-height: 1.55;
+      color: rgba(255,255,255,0.44);
+      line-height: 1.4;
     }
 
     /* =========================================
@@ -403,7 +386,7 @@
     .label-on-dark { color: var(--cyan-500); }
 
     .h2 {
-      font-size: clamp(32px, 3.8vw, 54px);
+      font-size: clamp(32px, 3.6vw, 52px);
       font-weight: 800;
       letter-spacing: -0.03em;
       color: var(--dark-800);
@@ -421,7 +404,7 @@
     .lead-muted { color: rgba(255,255,255,0.44); }
 
     /* =========================================
-       ABOUT SECTION
+       WHY LYNKSPIRE (was About)
     ========================================= */
     .about-grid {
       display: grid;
@@ -429,7 +412,6 @@
       gap: 96px;
       align-items: center;
     }
-
     .about-media { position: relative; }
     .about-img {
       width: 100%;
@@ -438,8 +420,7 @@
     }
     .about-badge {
       position: absolute;
-      bottom: -28px;
-      right: -28px;
+      bottom: -28px; right: -28px;
       background: var(--dark-800);
       padding: 28px 32px;
       min-width: 200px;
@@ -458,10 +439,7 @@
       line-height: 1.5;
       max-width: 130px;
     }
-
     .about-text { padding-bottom: 32px; }
-    .about-text .lead { max-width: 100%; }
-
     .proof-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -489,7 +467,6 @@
        SERVICES
     ========================================= */
     .services-bg { background: var(--grey-50); }
-
     .services-header {
       display: flex;
       justify-content: space-between;
@@ -504,7 +481,6 @@
       max-width: 400px;
       flex-shrink: 0;
     }
-
     .services-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -542,12 +518,7 @@
       transition: color var(--t) var(--ease);
     }
     .svc-card:hover .svc-num { color: rgba(0,212,232,0.08); }
-    .svc-rule {
-      width: 36px;
-      height: 2px;
-      background: var(--cyan-500);
-      margin-bottom: 22px;
-    }
+    .svc-rule { width: 36px; height: 2px; background: var(--cyan-500); margin-bottom: 22px; }
     .svc-title {
       font-size: 22px;
       font-weight: 700;
@@ -555,11 +526,7 @@
       letter-spacing: -0.02em;
       margin-bottom: 14px;
     }
-    .svc-text {
-      font-size: 15px;
-      color: var(--grey-500);
-      line-height: 1.72;
-    }
+    .svc-text { font-size: 15px; color: var(--grey-500); line-height: 1.72; }
     .svc-link {
       display: inline-flex;
       align-items: center;
@@ -573,68 +540,53 @@
     .svc-link:hover { gap: 10px; color: var(--cyan-500); }
 
     /* =========================================
-       WHY US — dark section
+       PROCESS
     ========================================= */
-    .why-bg {
-      background: var(--dark-800);
+    .process-bg { background: var(--grey-50); }
+    .process-header { text-align: center; margin-bottom: 80px; }
+    .process-header .lead { margin: 16px auto 0; text-align: center; }
+    .process-track {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
       position: relative;
-      overflow: hidden;
     }
-    .why-bg::before {
+    .process-track::before {
       content: '';
       position: absolute;
-      top: -240px; right: -240px;
-      width: 700px; height: 700px;
-      background: radial-gradient(circle at center,
-        rgba(0,212,232,0.07) 0%,
-        rgba(26,106,255,0.04) 50%,
-        transparent 70%
-      );
-      pointer-events: none;
+      top: 30px;
+      left: calc(12.5% + 8px);
+      right: calc(12.5% + 8px);
+      height: 1px;
+      background: var(--grey-200);
     }
-
-    .why-header { margin-bottom: 64px; }
-    .why-header .lead-muted { margin-top: 18px; max-width: 540px; }
-
-    .why-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-    }
-    .why-card {
-      padding: 36px 30px;
-      border: 1px solid rgba(255,255,255,0.07);
-      transition: border-color var(--t) var(--ease), background var(--t) var(--ease);
-    }
-    .why-card:hover {
-      border-color: rgba(0,212,232,0.3);
-      background: rgba(0,212,232,0.04);
-    }
-    .why-num {
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      color: var(--cyan-500);
-      margin-bottom: 20px;
-    }
-    .why-title {
-      font-size: 18px;
-      font-weight: 700;
-      color: var(--white);
-      margin-bottom: 12px;
+    .process-step { text-align: center; padding: 0 20px; position: relative; z-index: 1; }
+    .process-num {
+      width: 60px; height: 60px;
+      background: var(--white);
+      border: 1.5px solid var(--grey-200);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+      font-weight: 800;
+      color: var(--dark-800);
+      margin: 0 auto 32px;
       letter-spacing: -0.02em;
+      transition: background var(--t) var(--ease), border-color var(--t) var(--ease), color var(--t) var(--ease);
     }
-    .why-text {
-      font-size: 14px;
-      color: rgba(255,255,255,0.42);
-      line-height: 1.72;
+    .process-step:hover .process-num {
+      background: var(--cyan-500);
+      border-color: var(--cyan-500);
+      color: var(--dark-900);
     }
+    .process-title { font-size: 16px; font-weight: 700; color: var(--dark-800); margin-bottom: 12px; }
+    .process-text { font-size: 13.5px; color: var(--grey-400); line-height: 1.65; }
 
     /* =========================================
        INDUSTRIES
     ========================================= */
     .industries-header { margin-bottom: 56px; }
-
     .ind-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -660,91 +612,58 @@
       transition: transform 0.36s var(--ease);
     }
     .ind-card:hover::after { transform: scaleX(1); }
-    .ind-icon {
-      width: 44px; height: 44px;
-      color: var(--dark-700);
-      opacity: 0.6;
-      margin-bottom: 20px;
-    }
-    .ind-name {
-      font-size: 19px;
-      font-weight: 700;
-      color: var(--dark-800);
-      letter-spacing: -0.02em;
-      margin-bottom: 10px;
-    }
-    .ind-text {
-      font-size: 13.5px;
-      color: var(--grey-400);
-      line-height: 1.65;
-    }
+    .ind-icon { width: 44px; height: 44px; color: var(--dark-700); opacity: 0.6; margin-bottom: 20px; }
+    .ind-name { font-size: 19px; font-weight: 700; color: var(--dark-800); letter-spacing: -0.02em; margin-bottom: 10px; }
+    .ind-text { font-size: 13.5px; color: var(--grey-400); line-height: 1.65; }
 
     /* =========================================
-       PROCESS
+       WHY US — 4 PILLARS
     ========================================= */
-    .process-bg { background: var(--grey-50); }
-
-    .process-header {
-      text-align: center;
-      margin-bottom: 80px;
-    }
-    .process-header .lead { margin: 16px auto 0; text-align: center; }
-
-    .process-track {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
+    .why-bg {
+      background: var(--dark-800);
       position: relative;
+      overflow: hidden;
     }
-    .process-track::before {
+    .why-bg::before {
       content: '';
       position: absolute;
-      top: 30px;
-      left: calc(12.5% + 8px);
-      right: calc(12.5% + 8px);
-      height: 1px;
-      background: var(--grey-200);
+      top: -240px; right: -240px;
+      width: 700px; height: 700px;
+      background: radial-gradient(circle at center,
+        rgba(0,212,232,0.07) 0%,
+        rgba(26,106,255,0.04) 50%,
+        transparent 70%
+      );
+      pointer-events: none;
     }
-    .process-step {
-      text-align: center;
-      padding: 0 20px;
-      position: relative;
-      z-index: 1;
+    .why-header { margin-bottom: 64px; }
+    .why-header .lead-muted { margin-top: 18px; max-width: 540px; }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
-    .process-num {
-      width: 60px; height: 60px;
-      background: var(--white);
-      border: 1.5px solid var(--grey-200);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 17px;
-      font-weight: 800;
-      color: var(--dark-800);
-      margin: 0 auto 32px;
-      letter-spacing: -0.02em;
-      transition: background var(--t) var(--ease), border-color var(--t) var(--ease), color var(--t) var(--ease);
+    .why-card {
+      padding: 40px 32px;
+      border: 1px solid rgba(255,255,255,0.07);
+      transition: border-color var(--t) var(--ease), background var(--t) var(--ease);
     }
-    .process-step:hover .process-num {
-      background: var(--cyan-500);
-      border-color: var(--cyan-500);
-      color: var(--dark-900);
+    .why-card:hover {
+      border-color: rgba(0,212,232,0.3);
+      background: rgba(0,212,232,0.04);
     }
-    .process-title {
-      font-size: 16px;
+    .why-num {
+      font-size: 11px;
       font-weight: 700;
-      color: var(--dark-800);
-      margin-bottom: 12px;
-      letter-spacing: -0.01em;
+      letter-spacing: 0.12em;
+      color: var(--cyan-500);
+      margin-bottom: 20px;
     }
-    .process-text {
-      font-size: 13.5px;
-      color: var(--grey-400);
-      line-height: 1.65;
-    }
+    .why-title { font-size: 18px; font-weight: 700; color: var(--white); margin-bottom: 12px; letter-spacing: -0.02em; }
+    .why-text { font-size: 14px; color: rgba(255,255,255,0.42); line-height: 1.72; }
 
     /* =========================================
-       CAPABILITIES — dark
+       CAPABILITIES
     ========================================= */
     .cap-bg {
       background: var(--dark-950);
@@ -756,25 +675,16 @@
       position: absolute;
       bottom: -200px; left: -200px;
       width: 600px; height: 600px;
-      background: radial-gradient(circle,
-        rgba(26,106,255,0.08) 0%,
-        transparent 65%
-      );
+      background: radial-gradient(circle, rgba(26,106,255,0.08) 0%, transparent 65%);
       pointer-events: none;
     }
-
     .cap-inner {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 88px;
       align-items: center;
     }
-    .cap-list {
-      margin-top: 36px;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-    }
+    .cap-list { margin-top: 36px; display: flex; flex-direction: column; gap: 14px; }
     .cap-item {
       display: flex;
       align-items: center;
@@ -782,27 +692,14 @@
       font-size: 15px;
       color: rgba(255,255,255,0.58);
     }
-    .cap-item::before {
-      content: '';
-      flex-shrink: 0;
-      width: 18px;
-      height: 1.5px;
-      background: var(--cyan-500);
-    }
-    .cap-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
+    .cap-item::before { content: ''; flex-shrink: 0; width: 18px; height: 1.5px; background: var(--cyan-500); }
+    .cap-cards { display: flex; flex-direction: column; gap: 20px; }
     .cap-card {
       padding: 28px 30px;
       border: 1px solid rgba(255,255,255,0.07);
       transition: border-color var(--t) var(--ease), background var(--t) var(--ease);
     }
-    .cap-card:hover {
-      border-color: rgba(0,212,232,0.25);
-      background: rgba(0,212,232,0.03);
-    }
+    .cap-card:hover { border-color: rgba(0,212,232,0.25); background: rgba(0,212,232,0.03); }
     .cap-card-label {
       font-size: 10.5px;
       font-weight: 700;
@@ -811,12 +708,7 @@
       color: var(--cyan-500);
       margin-bottom: 10px;
     }
-    .cap-card-text {
-      font-size: 15.5px;
-      font-weight: 600;
-      color: var(--white);
-      line-height: 1.55;
-    }
+    .cap-card-text { font-size: 15.5px; font-weight: 600; color: var(--white); line-height: 1.55; }
 
     /* =========================================
        VALUE
@@ -827,58 +719,24 @@
       gap: 96px;
       align-items: center;
     }
-    .value-img {
-      width: 100%;
-      height: 520px;
-      object-fit: cover;
-    }
-    .value-list {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
-    }
+    .value-img { width: 100%; height: 520px; object-fit: cover; }
+    .value-list { margin-top: 40px; display: flex; flex-direction: column; gap: 28px; }
     .value-item { display: flex; gap: 20px; }
-    .value-bar {
-      flex-shrink: 0;
-      width: 3px;
-      height: 68px;
-      background: var(--cyan-500);
-      margin-top: 3px;
-    }
-    .value-title {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--dark-800);
-      margin-bottom: 6px;
-    }
-    .value-text {
-      font-size: 14px;
-      color: var(--grey-400);
-      line-height: 1.65;
-    }
+    .value-bar { flex-shrink: 0; width: 3px; height: 68px; background: var(--cyan-500); margin-top: 3px; }
+    .value-title { font-size: 15px; font-weight: 700; color: var(--dark-800); margin-bottom: 6px; }
+    .value-text { font-size: 14px; color: var(--grey-400); line-height: 1.65; }
 
     /* =========================================
        FAQ
     ========================================= */
     .faq-bg { background: var(--grey-50); }
-    .faq-layout {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      gap: 88px;
-    }
+    .faq-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 88px; }
     .faq-sidebar .lead { margin-top: 16px; }
-    .faq-sidebar .lead a {
-      color: var(--cyan-600);
-      font-weight: 600;
-      transition: color var(--t) var(--ease);
-    }
+    .faq-sidebar .lead a { color: var(--cyan-600); font-weight: 600; transition: color var(--t) var(--ease); }
     .faq-sidebar .lead a:hover { color: var(--cyan-500); }
-
     .faq-list { display: flex; flex-direction: column; }
     .faq-item { border-bottom: 1px solid var(--grey-200); }
     .faq-item:first-child { border-top: 1px solid var(--grey-200); }
-
     .faq-btn {
       width: 100%;
       text-align: left;
@@ -891,32 +749,21 @@
       align-items: center;
       gap: 16px;
       transition: color var(--t) var(--ease);
-      background: none;
-      border: none;
-      cursor: pointer;
+      background: none; border: none; cursor: pointer;
     }
     .faq-btn:hover { color: var(--cyan-600); }
     .faq-icon {
       flex-shrink: 0;
       width: 22px; height: 22px;
-      border: 1.5px solid var(--grey-300);
+      border: 1.5px solid var(--grey-200);
       border-radius: 50%;
       display: grid;
       place-items: center;
       transition: transform var(--t) var(--ease), border-color var(--t) var(--ease);
     }
-    .faq-item.open .faq-icon {
-      transform: rotate(180deg);
-      border-color: var(--cyan-500);
-    }
+    .faq-item.open .faq-icon { transform: rotate(180deg); border-color: var(--cyan-500); }
     .faq-item.open .faq-icon svg { stroke: var(--cyan-500); }
-    .faq-body {
-      display: none;
-      padding-bottom: 24px;
-      font-size: 15px;
-      color: var(--grey-500);
-      line-height: 1.72;
-    }
+    .faq-body { display: none; padding-bottom: 24px; font-size: 15px; color: var(--grey-500); line-height: 1.72; }
     .faq-item.open .faq-body { display: block; }
 
     /* =========================================
@@ -936,7 +783,6 @@
       background-position: center;
       opacity: 0.08;
     }
-    /* Cyan glow behind form area */
     .cta-glow {
       position: absolute;
       top: 50%; left: 50%;
@@ -965,18 +811,8 @@
       gap: 14px;
       flex-wrap: wrap;
     }
-
-    /* FORM */
-    .contact-form {
-      max-width: 740px;
-      margin: 52px auto 0;
-      text-align: left;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-    }
+    .contact-form { max-width: 740px; margin: 52px auto 0; text-align: left; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .form-full { grid-column: 1 / -1; }
     .form-group { display: flex; flex-direction: column; gap: 8px; }
     .form-label {
@@ -1000,26 +836,12 @@
       -webkit-appearance: none;
     }
     .form-ctrl::placeholder { color: rgba(255,255,255,0.18); }
-    .form-ctrl:focus {
-      border-color: var(--cyan-500);
-      background: rgba(0,212,232,0.05);
-    }
+    .form-ctrl:focus { border-color: var(--cyan-500); background: rgba(0,212,232,0.05); }
     .form-ctrl option { color: var(--grey-900); background: var(--white); }
     textarea.form-ctrl { resize: vertical; min-height: 120px; }
-    .form-submit {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
+    .form-submit { display: flex; justify-content: center; margin-top: 20px; }
     .form-submit .btn { font-size: 15px; padding: 15px 40px; }
-    .form-success {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 15px;
-      color: var(--cyan-400);
-      font-weight: 600;
-      display: none;
-    }
+    .form-success { text-align: center; margin-top: 20px; font-size: 15px; color: var(--cyan-400); font-weight: 600; display: none; }
 
     /* =========================================
        FOOTER
@@ -1034,12 +856,7 @@
     }
     .footer-logo { margin-bottom: 16px; }
     .footer-logo img { height: 40px; width: auto; }
-    .footer-brand-text {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.3);
-      line-height: 1.7;
-      max-width: 280px;
-    }
+    .footer-brand-text { font-size: 13.5px; color: rgba(255,255,255,0.3); line-height: 1.7; max-width: 280px; }
     .footer-col-title {
       font-size: 10.5px;
       font-weight: 700;
@@ -1049,11 +866,7 @@
       margin-bottom: 20px;
     }
     .footer-links li + li { margin-top: 12px; }
-    .footer-links a {
-      font-size: 13.5px;
-      color: rgba(255,255,255,0.45);
-      transition: color var(--t) var(--ease);
-    }
+    .footer-links a { font-size: 13.5px; color: rgba(255,255,255,0.45); transition: color var(--t) var(--ease); }
     .footer-links a:hover { color: var(--cyan-500); }
     .footer-bottom {
       display: flex;
@@ -1084,21 +897,24 @@
        RESPONSIVE
     ========================================= */
     @media (max-width: 1100px) {
-      .about-grid, .value-grid  { gap: 56px; }
+      .about-grid, .value-grid { gap: 56px; }
       .cap-inner                { gap: 56px; }
       .faq-layout               { gap: 56px; }
       .footer-top               { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .why-grid                 { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
       .nav-links, .nav-cta      { display: none; }
       .nav-hamburger            { display: flex; }
-      .trust-grid               { grid-template-columns: repeat(2, 1fr); }
+      .hero-inner               { grid-template-columns: 1fr; }
+      .hero-image               { display: none; }
+      .hero-text                { padding: 80px 0; }
+      .trust-strip-inner        { grid-template-columns: repeat(2, 1fr); }
       .about-grid, .value-grid, .cap-inner { grid-template-columns: 1fr; gap: 48px; }
       .about-badge              { right: 0; }
       .services-header          { flex-direction: column; align-items: flex-start; gap: 20px; }
       .services-header-note     { max-width: 100%; }
       .services-grid            { grid-template-columns: 1fr; }
-      .why-grid                 { grid-template-columns: 1fr 1fr; gap: 16px; }
       .ind-grid                 { grid-template-columns: repeat(2, 1fr); }
       .process-track            { grid-template-columns: 1fr 1fr; gap: 40px; }
       .process-track::before    { display: none; }
@@ -1109,10 +925,9 @@
     }
     @media (max-width: 580px) {
       .section          { padding: 72px 0; }
-      .hero             { min-height: 88vh; }
-      .hero h1          { font-size: 40px; }
+      .hero h1          { font-size: 34px; }
       .hero-actions     { flex-direction: column; align-items: flex-start; }
-      .trust-grid       { grid-template-columns: 1fr; }
+      .trust-strip-inner{ grid-template-columns: 1fr; }
       .why-grid         { grid-template-columns: 1fr; }
       .ind-grid         { grid-template-columns: 1fr; }
       .process-track    { grid-template-columns: 1fr; }
@@ -1161,68 +976,104 @@
     <a href="#contact" class="m-cta">Request a Quote &rarr;</a>
   </div>
 
-  <!-- ==================== HERO ==================== -->
+  <!-- ==================== HERO — 60/40 ==================== -->
   <section class="hero">
-    <div class="hero-photo"></div>
-    <div class="hero-orb"></div>
-    <div class="hero-ring"></div>
-    <div class="container">
-      <div class="hero-content">
-        <div class="eyebrow">
-          <span class="eyebrow-rule"></span>
-          Lynkspire Global Partners
+    <div class="container" style="padding: 0; width: 100%; max-width: 100%;">
+      <div class="hero-inner">
+
+        <!-- Left 60% — text -->
+        <div class="hero-text">
+          <div class="container">
+            <div class="eyebrow">
+              <span class="eyebrow-rule"></span>
+              Lynkspire Global Partners
+            </div>
+            <h1>
+              Reliable Global Supply Solutions for
+              <span class="accent">Importers, Distributors,</span>
+              and Commercial Buyers
+            </h1>
+            <p class="hero-sub">
+              Lynkspire helps businesses source products, coordinate imports, and build
+              dependable supply channels with clear communication and practical execution.
+            </p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-cyan">Request a Quote &rarr;</a>
+              <a href="#services" class="btn btn-outline-white">Explore Services</a>
+            </div>
+          </div>
         </div>
-        <h1>
-          Global Supply<br/>
-          Solutions Built<br/>
-          for <span class="accent">Reliable Trade</span>
-        </h1>
-        <p class="hero-sub">
-          We help businesses source, import, distribute, and supply products with confidence.
-          From procurement to delivery, we focus on reliable service, clear communication,
-          and practical solutions that support long-term growth.
-        </p>
-        <div class="hero-actions">
-          <a href="#contact" class="btn btn-cyan">Request a Quote &rarr;</a>
-          <a href="#services" class="btn btn-outline-white">View Services</a>
+
+        <!-- Right 40% — image -->
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=900&q=80"
+            alt="Global cargo vessel at sea"
+          />
         </div>
-        <p class="hero-trust">
-          Trusted by importers, distributors, contractors, retailers, and commercial buyers
-          looking for dependable supply support.
-        </p>
+
       </div>
     </div>
   </section>
 
-  <!-- TRUST BAND -->
-  <div class="trust-band">
+  <!-- ==================== TRUST STRIP ==================== -->
+  <div class="trust-strip">
     <div class="container" style="padding: 0;">
-      <div class="trust-grid">
-        <div class="trust-cell" data-reveal>
-          <div class="trust-cell-tag">Capability</div>
-          <div class="trust-cell-title">Reliable Sourcing</div>
-          <div class="trust-cell-text">Products sourced from vetted manufacturers with commercial precision.</div>
+      <div class="trust-strip-inner">
+
+        <div class="trust-stat" data-reveal>
+          <div class="trust-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+            </svg>
+          </div>
+          <div class="trust-stat-body">
+            <div class="trust-stat-value"><span>50+</span> Countries</div>
+            <div class="trust-stat-label">in our Global Network</div>
+          </div>
         </div>
-        <div class="trust-cell" data-reveal data-delay="1">
-          <div class="trust-cell-tag">Service</div>
-          <div class="trust-cell-title">Business-Focused</div>
-          <div class="trust-cell-text">Built around your operational reality, not generic supply frameworks.</div>
+
+        <div class="trust-stat" data-reveal data-delay="1">
+          <div class="trust-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/>
+            </svg>
+          </div>
+          <div class="trust-stat-body">
+            <div class="trust-stat-value"><span>B2B</span> Focused</div>
+            <div class="trust-stat-label">Supply Support</div>
+          </div>
         </div>
-        <div class="trust-cell" data-reveal data-delay="2">
-          <div class="trust-cell-tag">Scale</div>
-          <div class="trust-cell-title">Scalable Capability</div>
-          <div class="trust-cell-text">From single orders to recurring wholesale supply at any volume.</div>
+
+        <div class="trust-stat" data-reveal data-delay="2">
+          <div class="trust-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+            </svg>
+          </div>
+          <div class="trust-stat-body">
+            <div class="trust-stat-value"><span>24-Hour</span></div>
+            <div class="trust-stat-label">Quote Response Time</div>
+          </div>
         </div>
-        <div class="trust-cell" data-reveal data-delay="3">
-          <div class="trust-cell-tag">Relationships</div>
-          <div class="trust-cell-title">Long-Term Partners</div>
-          <div class="trust-cell-text">Supply relationships grounded in trust and consistent delivery.</div>
+
+        <div class="trust-stat" data-reveal data-delay="3">
+          <div class="trust-stat-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+          <div class="trust-stat-body">
+            <div class="trust-stat-value"><span>End-to-End</span></div>
+            <div class="trust-stat-label">Import Coordination</div>
+          </div>
         </div>
+
       </div>
     </div>
   </div>
 
-  <!-- ==================== ABOUT ==================== -->
+  <!-- ==================== WHY LYNKSPIRE (About) ==================== -->
   <section class="section" id="about">
     <div class="container">
       <div class="about-grid">
@@ -1240,7 +1091,7 @@
         </div>
         <div class="about-text" data-reveal data-delay="2">
           <div class="label">About Lynkspire</div>
-          <h2 class="h2">Built for Business.<br/>Focused on Reliability.</h2>
+          <h2 class="h2">Why Lynkspire</h2>
           <p class="lead" style="max-width: 100%;">
             We work with businesses that value consistency, responsiveness, and supply certainty.
             Our approach is built around commercial understanding, operational discipline, and
@@ -1315,47 +1166,34 @@
     </div>
   </section>
 
-  <!-- ==================== WHY US ==================== -->
-  <section class="section why-bg" id="why-us">
+  <!-- ==================== PROCESS ==================== -->
+  <section class="section process-bg">
     <div class="container">
-      <div class="why-header" data-reveal>
-        <div class="label label-on-dark">Why Businesses Choose Us</div>
-        <h2 class="h2 h2-white" style="max-width: 560px;">Supply is about<br/>more than price.</h2>
-        <p class="lead lead-muted" style="max-width: 540px;">
-          It is about reliability, communication, and the ability to deliver with consistency.
-          We work to give our clients confidence at every stage of the process.
-        </p>
+      <div class="process-header" data-reveal>
+        <div class="label">How We Work</div>
+        <h2 class="h2">Simple. Clear.<br/>Commercially Practical.</h2>
+        <p class="lead">Our process is designed to keep things simple, clear, and commercially practical at every step.</p>
       </div>
-      <div class="why-grid">
-        <div class="why-card" data-reveal>
-          <div class="why-num">01</div>
-          <div class="why-title">Reliable Supply</div>
-          <div class="why-text">We focus on supply consistency and practical execution, helping businesses reduce uncertainty and operate with greater confidence.</div>
+      <div class="process-track">
+        <div class="process-step" data-reveal>
+          <div class="process-num">01</div>
+          <h3 class="process-title">Tell Us What You Need</h3>
+          <p class="process-text">Share your product requirements, quantities, and business objectives with us to get started.</p>
         </div>
-        <div class="why-card" data-reveal data-delay="1">
-          <div class="why-num">02</div>
-          <div class="why-title">Commercial Understanding</div>
-          <div class="why-text">We understand pricing, lead times, stock movement, and the realities of doing business in demanding, competitive markets.</div>
+        <div class="process-step" data-reveal data-delay="1">
+          <div class="process-num">02</div>
+          <h3 class="process-title">We Assess the Best Route</h3>
+          <p class="process-text">We evaluate the sourcing and supply approach that best fits your commercial and operational needs.</p>
         </div>
-        <div class="why-card" data-reveal data-delay="2">
-          <div class="why-num">03</div>
-          <div class="why-title">Clear Communication</div>
-          <div class="why-text">We keep communication simple, responsive, and focused, so clients know where they stand and what comes next.</div>
+        <div class="process-step" data-reveal data-delay="2">
+          <div class="process-num">03</div>
+          <h3 class="process-title">We Structure the Solution</h3>
+          <p class="process-text">We align the supply process around pricing, product fit, and practical delivery expectations.</p>
         </div>
-        <div class="why-card" data-reveal data-delay="1">
-          <div class="why-num">04</div>
-          <div class="why-title">Scalable Service</div>
-          <div class="why-text">Whether your business needs a single order, repeat supply, or long-term support, we structure our service to support your growth.</div>
-        </div>
-        <div class="why-card" data-reveal data-delay="2">
-          <div class="why-num">05</div>
-          <div class="why-title">Global Perspective</div>
-          <div class="why-text">We approach sourcing and supply with an international mindset while staying grounded in practical business execution.</div>
-        </div>
-        <div class="why-card" data-reveal data-delay="3">
-          <div class="why-num">06</div>
-          <div class="why-title">Long-Term Mindset</div>
-          <div class="why-text">We build supply relationships that evolve with your business, focused on sustained value rather than one-off transactions.</div>
+        <div class="process-step" data-reveal data-delay="3">
+          <div class="process-num">04</div>
+          <h3 class="process-title">Delivery &amp; Ongoing Supply</h3>
+          <p class="process-text">We focus on responsive follow-through and building a dependable supply relationship over time.</p>
         </div>
       </div>
     </div>
@@ -1425,34 +1263,37 @@
     </div>
   </section>
 
-  <!-- ==================== PROCESS ==================== -->
-  <section class="section process-bg">
+  <!-- ==================== WHY US — 4 PILLARS ==================== -->
+  <section class="section why-bg" id="why-us">
     <div class="container">
-      <div class="process-header" data-reveal>
-        <div class="label">How We Work</div>
-        <h2 class="h2">Simple. Clear.<br/>Commercially Practical.</h2>
-        <p class="lead">Our process is designed to keep things simple, clear, and commercially practical at every step.</p>
+      <div class="why-header" data-reveal>
+        <div class="label label-on-dark">Why Businesses Choose Us</div>
+        <h2 class="h2 h2-white" style="max-width: 520px;">Supply is about more than price.</h2>
+        <p class="lead lead-muted">
+          It is about reliability, communication, and the ability to deliver with consistency.
+          We work to give our clients confidence at every stage of the process.
+        </p>
       </div>
-      <div class="process-track">
-        <div class="process-step" data-reveal>
-          <div class="process-num">01</div>
-          <h3 class="process-title">Tell Us What You Need</h3>
-          <p class="process-text">Share your product requirements, quantities, and business objectives with us to get started.</p>
+      <div class="why-grid">
+        <div class="why-card" data-reveal>
+          <div class="why-num">01</div>
+          <div class="why-title">Reliable Supply</div>
+          <div class="why-text">Consistent execution and dependable follow-through at every stage of the supply process.</div>
         </div>
-        <div class="process-step" data-reveal data-delay="1">
-          <div class="process-num">02</div>
-          <h3 class="process-title">We Assess the Best Route</h3>
-          <p class="process-text">We evaluate the sourcing and supply approach that best fits your commercial and operational needs.</p>
+        <div class="why-card" data-reveal data-delay="1">
+          <div class="why-num">02</div>
+          <div class="why-title">Commercial Clarity</div>
+          <div class="why-text">Transparent pricing, lead times, and supply expectations so you always know where you stand.</div>
         </div>
-        <div class="process-step" data-reveal data-delay="2">
-          <div class="process-num">03</div>
-          <h3 class="process-title">We Structure the Solution</h3>
-          <p class="process-text">We align the supply process around pricing, product fit, and practical delivery expectations.</p>
+        <div class="why-card" data-reveal data-delay="2">
+          <div class="why-num">03</div>
+          <div class="why-title">Scalable Support</div>
+          <div class="why-text">Built to handle everything from first orders to recurring wholesale supply at any volume.</div>
         </div>
-        <div class="process-step" data-reveal data-delay="3">
-          <div class="process-num">04</div>
-          <h3 class="process-title">Delivery &amp; Ongoing Supply</h3>
-          <p class="process-text">We focus on responsive follow-through and building a dependable supply relationship over time.</p>
+        <div class="why-card" data-reveal data-delay="3">
+          <div class="why-num">04</div>
+          <div class="why-title">Long-Term Value</div>
+          <div class="why-text">Focused on supply relationships that strengthen over time and support your business growth.</div>
         </div>
       </div>
     </div>
@@ -1503,7 +1344,7 @@
         <div data-reveal>
           <div class="label">Our Commitment</div>
           <h2 class="h2">Focused on<br/>Long-Term Value</h2>
-          <p class="lead" style="margin-top: 18px; max-width: 100%;">
+          <p class="lead" style="max-width: 100%;">
             We believe the strongest supply relationships are built on consistency, trust, and
             the ability to deliver in a way that supports the client's business over time.
           </p>
@@ -1563,9 +1404,7 @@
                 <svg width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="#64748b" stroke-width="1.6" stroke-linecap="round"><path d="M1 1l4 4 4-4"/></svg>
               </span>
             </button>
-            <div class="faq-body">
-              Yes. We support businesses that require local supply solutions as well as broader sourcing and import-related support, depending on the product and requirement.
-            </div>
+            <div class="faq-body">Yes. We support businesses that require local supply solutions as well as broader sourcing and import-related support, depending on the product and requirement.</div>
           </div>
           <div class="faq-item">
             <button class="faq-btn" aria-expanded="false">
@@ -1622,7 +1461,6 @@
           Let's discuss your sourcing, import, distribution, or wholesale requirements
           and build a practical solution for your business.
         </p>
-
         <form class="contact-form" id="contactForm" novalidate>
           <div class="form-row">
             <div class="form-group">
@@ -1719,15 +1557,13 @@
     (function () {
       'use strict';
 
-      /* Nav scroll shadow */
       var nav = document.getElementById('nav');
       window.addEventListener('scroll', function () {
         nav.classList.toggle('scrolled', window.scrollY > 24);
       }, { passive: true });
 
-      /* Mobile hamburger */
-      var hamburger   = document.getElementById('hamburger');
-      var mobileMenu  = document.getElementById('mobileMenu');
+      var hamburger  = document.getElementById('hamburger');
+      var mobileMenu = document.getElementById('mobileMenu');
       hamburger.addEventListener('click', function () {
         var open = mobileMenu.classList.toggle('open');
         hamburger.classList.toggle('active', open);
@@ -1741,34 +1577,22 @@
         });
       });
 
-      /* Smooth scroll */
       document.querySelectorAll('a[href^="#"]').forEach(function (a) {
         a.addEventListener('click', function (e) {
           var id = a.getAttribute('href');
           if (id === '#') return;
           var target = document.querySelector(id);
-          if (target) {
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
+          if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
         });
       });
 
-      /* Scroll reveal */
       var io = new IntersectionObserver(function (entries) {
         entries.forEach(function (entry) {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('revealed');
-            io.unobserve(entry.target);
-          }
+          if (entry.isIntersecting) { entry.target.classList.add('revealed'); io.unobserve(entry.target); }
         });
       }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+      document.querySelectorAll('[data-reveal]').forEach(function (el) { io.observe(el); });
 
-      document.querySelectorAll('[data-reveal]').forEach(function (el) {
-        io.observe(el);
-      });
-
-      /* FAQ accordion */
       document.querySelectorAll('.faq-btn').forEach(function (btn) {
         btn.addEventListener('click', function () {
           var item   = btn.closest('.faq-item');
@@ -1777,14 +1601,10 @@
             i.classList.remove('open');
             i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
           });
-          if (!isOpen) {
-            item.classList.add('open');
-            btn.setAttribute('aria-expanded', 'true');
-          }
+          if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded', 'true'); }
         });
       });
 
-      /* Contact form */
       var form    = document.getElementById('contactForm');
       var success = document.getElementById('formSuccess');
       form.addEventListener('submit', function (e) {
