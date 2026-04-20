@@ -84,13 +84,20 @@
       justify-content: space-between;
       height: 296px;
       gap: 32px;
+      transition: height 0.38s cubic-bezier(0.4,0,0.2,1);
     }
 
     .nav-logo img {
       height: 280px;
       width: auto;
       display: block;
+      transition: height 0.38s cubic-bezier(0.4,0,0.2,1);
     }
+
+    /* Shrink nav on scroll */
+    .nav.scrolled .nav-inner   { height: 76px; }
+    .nav.scrolled .nav-logo img { height: 64px; }
+    .nav.scrolled + .mobile-menu { top: 76px; }
 
     .nav-links {
       display: flex;
@@ -904,10 +911,7 @@
       .why-grid                 { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 900px) {
-      /* Nav — shrink logo to a sensible mobile size */
-      .nav-inner                { height: 76px; gap: 20px; }
-      .nav-logo img             { height: 64px; }
-      .mobile-menu              { top: 76px; }
+      /* Nav — hide links, show hamburger; size handled by scroll state */
       .nav-links, .nav-cta      { display: none; }
       .nav-hamburger            { display: flex; }
 
