@@ -1605,7 +1605,12 @@
 
       var nav = document.getElementById('nav');
       window.addEventListener('scroll', function () {
-        nav.classList.toggle('scrolled', window.scrollY > 24);
+        var y = window.scrollY;
+        if (y > 80) {
+          nav.classList.add('scrolled');
+        } else if (y < 40) {
+          nav.classList.remove('scrolled');
+        }
       }, { passive: true });
 
       var hamburger  = document.getElementById('hamburger');
