@@ -86,12 +86,14 @@
       justify-content: space-between;
       height: 296px;
       gap: 32px;
+      transition: height 0.2s var(--ease);
     }
 
     .nav-logo img {
       height: 280px;
       width: auto;
       display: block;
+      transition: height 0.2s var(--ease);
     }
 
     /* Shrink nav on scroll */
@@ -1606,9 +1608,9 @@
       var nav = document.getElementById('nav');
       window.addEventListener('scroll', function () {
         var y = window.scrollY;
-        if (y > 80) {
+        if (y > 350) {
           nav.classList.add('scrolled');
-        } else if (y < 40) {
+        } else if (y < 180) {
           nav.classList.remove('scrolled');
         }
       }, { passive: true });
