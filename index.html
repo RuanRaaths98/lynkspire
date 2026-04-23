@@ -491,7 +491,8 @@
       overflow: hidden;
       transition: background var(--t) var(--ease), transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
     }
-    .svc-card:hover { background: #f5f8ff; transform: scale(1.05) translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.15); }
+    .svc-card:hover,
+    .services-grid .svc-card:hover { background: #f5f8ff; transform: scale(1.05) translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.15); }
     .svc-card::before {
       content: '';
       position: absolute;
@@ -599,8 +600,10 @@
       position: relative;
       transition: background var(--t) var(--ease), transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
     }
-    .ind-card:hover { background: #f5f8ff; transform: scale(1.05) translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.15); z-index: 1; }
-    .ind-ghost:hover { transform: none; box-shadow: none; background: var(--white); }
+    .ind-card:hover,
+    .ind-grid .ind-card:hover { background: #f5f8ff; transform: scale(1.05) translateY(-6px); box-shadow: 0 16px 48px rgba(0,0,0,0.15); z-index: 1; }
+    .ind-ghost:hover,
+    .ind-grid .ind-ghost:hover { transform: none; box-shadow: none; background: var(--white); }
     .ind-card::after {
       content: '';
       position: absolute;
@@ -648,7 +651,8 @@
       border: 1px solid rgba(255,255,255,0.07);
       transition: border-color var(--t) var(--ease), background var(--t) var(--ease), transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
     }
-    .why-card:hover {
+    .why-card:hover,
+    .why-grid .why-card:hover {
       border-color: rgba(37,99,235,0.35);
       background: rgba(37,99,235,0.06);
       transform: scale(1.05) translateY(-6px);
