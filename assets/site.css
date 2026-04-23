@@ -321,7 +321,7 @@ input, select, textarea { font-family: var(--font); }
   border-top: 3px solid var(--grey-200);
   transition: border-top-color var(--t) var(--ease), transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
 }
-.problem-card:hover { border-top-color: var(--gold); transform: scale(1.018); box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
+.problem-card:hover { border-top-color: var(--gold); transform: scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.06); }
 .problem-icon { color: var(--gold-dark); margin-bottom: 14px; }
 .problem-title { font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
 .problem-text { font-size: 13.5px; color: var(--text-body); line-height: 1.65; }
@@ -425,7 +425,7 @@ input, select, textarea { font-family: var(--font); }
   position: relative;
   transition: background var(--t) var(--ease), transform var(--t) var(--ease), box-shadow var(--t) var(--ease);
 }
-.ind-card:hover { background: #f5f8ff; transform: scale(1.018); box-shadow: 0 8px 32px rgba(0,0,0,0.06); z-index: 1; }
+.ind-card:hover { background: #f5f8ff; transform: scale(1.03); box-shadow: 0 8px 32px rgba(0,0,0,0.06); z-index: 1; }
 .ind-card::after {
   content: '';
   position: absolute;
