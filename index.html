@@ -598,10 +598,13 @@
     .industries-header { margin-bottom: 56px; }
     .ind-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 3px;
       background: var(--grey-200);
     }
+    .ind-ghost { pointer-events: none; cursor: default; }
+    .ind-ghost:hover { background: var(--white); }
+    .ind-ghost::after { display: none !important; }
     .ind-card {
       background: var(--white);
       padding: 44px 36px;
@@ -1320,7 +1323,7 @@
           <div class="ind-name">Industrial &amp; B2B</div>
           <div class="ind-text">Industrial and commercial businesses sourcing components, supplies, or equipment from global manufacturers on a recurring basis.</div>
         </div>
-        <div class="ind-card" data-reveal style="grid-column:2/3">
+        <div class="ind-card" data-reveal>
           <svg class="ind-icon" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5">
             <circle cx="22" cy="22" r="16"/>
             <path d="M22 6c0 0-6 8-6 16s6 16 6 16M22 6c0 0 6 8 6 16s-6 16-6 16"/>
@@ -1330,6 +1333,7 @@
           <div class="ind-name">Sport &amp; Outdoor</div>
           <div class="ind-text">Sport, fitness, and outdoor brands sourcing equipment, apparel, and accessories from specialist global manufacturers with the right certifications and capacity.</div>
         </div>
+        <div class="ind-card ind-ghost" aria-hidden="true"></div>
       </div>
     </div>
   </section>
