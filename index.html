@@ -513,8 +513,11 @@
       color: var(--grey-100);
       line-height: 1;
       user-select: none;
+      pointer-events: none;
+      z-index: 0;
       transition: color var(--t) var(--ease);
     }
+    .svc-rule, .svc-title, .svc-text, .svc-link { position: relative; z-index: 1; }
     .svc-card:hover .svc-num { color: rgba(37,99,235,0.07); }
     .svc-rule { width: 36px; height: 2px; background: var(--blue); margin-bottom: 22px; }
     .svc-title {
@@ -973,10 +976,13 @@
       .form-row         { grid-template-columns: 1fr; }
       .cta-btns         { flex-direction: column; align-items: center; }
       .svc-card         { padding: 28px 20px; }
+      .svc-num          { display: none; }
       .cap-inner        { gap: 32px; }
       .value-grid       { gap: 32px; }
       .about-grid       { gap: 32px; }
       .why-card         { padding: 28px 20px; }
+      .process-step     { padding: 0 0 0 16px; text-align: left; display: flex; align-items: flex-start; gap: 16px; }
+      .process-num      { flex-shrink: 0; margin: 0; }
     }
   </style>
 </head>
@@ -1694,7 +1700,7 @@
           headers: { 'Accept': 'application/json' }
         }).then(function (res) {
           if (res.ok) {
-            window.location.href = 'https://lynkspireglobal.com/thank-you';
+            window.location.href = 'https://lynkspire.vercel.app/thank-you.html';
           } else { alert('Something went wrong. Please try again or email us directly.'); }
         }).catch(function () {
           alert('Something went wrong. Please try again or email us directly.');
