@@ -199,8 +199,8 @@
       var nav = document.getElementById('nav');
       window.addEventListener('scroll', function () {
         var y = window.scrollY;
-        if (y > 50) { nav.classList.add('scrolled'); }
-        else { nav.classList.remove('scrolled'); }
+        if (y > 350) { nav.classList.add('scrolled'); }
+        else if (y < 180) { nav.classList.remove('scrolled'); }
       }, { passive: true });
       var hamburger = document.getElementById('hamburger');
       var mobileMenu = document.getElementById('mobileMenu');
