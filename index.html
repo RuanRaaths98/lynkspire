@@ -518,7 +518,8 @@
       transition: color var(--t) var(--ease);
     }
     /* Services dropdown */
-    .nav-item { position: relative; padding-bottom: 16px; }
+    .nav-item { position: relative; }
+    .nav-item::after { content: ''; position: absolute; top: 100%; left: 0; right: 0; height: 16px; }
     .nav-item > a { display: flex; align-items: center; gap: 5px; }
     .nav-item > a .nav-chevron { display: inline-block; width: 8px; height: 5px; transition: transform 0.22s ease; flex-shrink: 0; }
     .nav-item:hover > a .nav-chevron { transform: rotate(180deg); }
