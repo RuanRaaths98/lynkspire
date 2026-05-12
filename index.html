@@ -517,6 +517,38 @@
       z-index: 0;
       transition: color var(--t) var(--ease);
     }
+    /* Services dropdown */
+    .nav-item { position: relative; }
+    .nav-item > a { display: flex; align-items: center; gap: 5px; }
+    .nav-item > a .nav-chevron { display: inline-block; width: 8px; height: 5px; transition: transform 0.22s ease; flex-shrink: 0; }
+    .nav-item:hover > a .nav-chevron { transform: rotate(180deg); }
+    .nav-dropdown {
+      display: none;
+      position: absolute;
+      top: calc(100% + 14px);
+      left: 50%;
+      transform: translateX(-50%);
+      background: #0d1a2e;
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 10px;
+      padding: 8px;
+      min-width: 220px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+      z-index: 910;
+    }
+    .nav-item:hover .nav-dropdown { display: block; }
+    .nav-dropdown a {
+      display: block;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      border-radius: 6px;
+      transition: background 0.22s ease, color 0.22s ease;
+      white-space: nowrap;
+    }
+    .nav-dropdown a:hover { background: rgba(255,255,255,0.06); color: #fff; }
+
     .svc-rule, .svc-title, .svc-text, .svc-link { position: relative; z-index: 1; }
     .svc-card:hover .svc-num { color: rgba(37,99,235,0.07); }
     .svc-rule { width: 36px; height: 2px; background: var(--blue); margin-bottom: 22px; }
@@ -538,7 +570,13 @@
       color: var(--blue);
       transition: gap var(--t) var(--ease), color var(--t) var(--ease);
     }
-    .svc-link:hover { gap: 10px; color: var(--blue-hover); }
+    .svc-link::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 2;
+    }
+    .svc-card:hover .svc-link { gap: 10px; color: var(--blue-hover); }
 
     /* =========================================
        PROCESS
@@ -1009,7 +1047,17 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </a>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
+          <li class="nav-item">
+            <a href="#services">Services <svg class="nav-chevron" viewBox="0 0 8 5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M1 1l3 3 3-3"/></svg></a>
+            <div class="nav-dropdown">
+              <a href="product-sourcing.html">Product Sourcing</a>
+              <a href="supplier-verification.html">Supplier Verification</a>
+              <a href="manufacturing.html">Manufacturing &amp; OEM</a>
+              <a href="quality-inspection.html">Quality Inspections</a>
+              <a href="import-logistics.html">Import Logistics</a>
+              <a href="supply-management.html">Ongoing Supply Support</a>
+            </div>
+          </li>
           <li><a href="#industries">Who We Serve</a></li>
           <li><a href="#why-us">Why Us</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -1025,7 +1073,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about">About</a>
-    <a href="#services">Services</a>
+    <a href="#services" style="font-weight:700;color:rgba(255,255,255,0.85)">Services</a>
+    <a href="product-sourcing.html" style="padding-left:28px;font-size:14px">Product Sourcing</a>
+    <a href="supplier-verification.html" style="padding-left:28px;font-size:14px">Supplier Verification</a>
+    <a href="manufacturing.html" style="padding-left:28px;font-size:14px">Manufacturing &amp; OEM</a>
+    <a href="quality-inspection.html" style="padding-left:28px;font-size:14px">Quality Inspections</a>
+    <a href="import-logistics.html" style="padding-left:28px;font-size:14px">Import Logistics</a>
+    <a href="supply-management.html" style="padding-left:28px;font-size:14px">Ongoing Supply Support</a>
     <a href="#industries">Who We Serve</a>
     <a href="#why-us">Why Us</a>
     <a href="#contact">Contact</a>
