@@ -72,22 +72,15 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      height: 296px;
+      height: 68px;
       gap: 32px;
-      transition: height 0.2s var(--ease);
     }
 
     .nav-logo img {
-      height: 280px;
+      height: 44px;
       width: auto;
       display: block;
-      transition: height 0.2s var(--ease);
     }
-
-    /* Shrink nav on scroll */
-    .nav.scrolled .nav-inner   { height: 136px; }
-    .nav.scrolled .nav-logo img { height: 124px; }
-    .nav.scrolled + .mobile-menu { top: 136px; }
 
     .nav-links {
       display: flex;
@@ -148,7 +141,7 @@
     .mobile-menu {
       display: none;
       position: fixed;
-      top: 296px; left: 0; right: 0;
+      top: 68px; left: 0; right: 0;
       background: var(--dark-800);
       border-bottom: 1px solid rgba(255,255,255,0.08);
       padding: 16px 20px 24px;
